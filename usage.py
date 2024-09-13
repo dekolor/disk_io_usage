@@ -39,7 +39,7 @@ def monitor_disk_usage():
                 continue
         
         # Sleep for a while before checking again
-        time.sleep(10)
+        time.sleep(int(os.getenv('INTERVAL')))
 
 if __name__ == "__main__":
     monitor_disk_usage()
